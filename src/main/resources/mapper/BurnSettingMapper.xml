@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cebon.jiwei.shengxunzhuji.mapper.BurnSettingMapper">
+
+    <resultMap id="BaseResultMap" type="com.cebon.jiwei.shengxunzhuji.model.po.BurnSetting">
+        <id column="mid" property="id"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="task_num" property="taskNum"/>
+        <result column="encryption_type" property="encryptionType"/>
+        <result column="password" property="password"/>
+        <result column="oda_save_path" property="odaSavePath"/>
+        <result column="done_task_num" property="doneTaskNum"/>
+        <result column="error_task_num" property="errorTaskNum"/>
+        <result column="call_back_url" property="callBackUrl"/>
+    </resultMap>
+
+
+</mapper>
