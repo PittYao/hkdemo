@@ -3,11 +3,13 @@ package com.cebon.jiwei.shengxunzhuji.controller;
 import com.cebon.jiwei.shengxunzhuji.model.dto.request.BurnFileDTO;
 import com.cebon.jiwei.shengxunzhuji.model.dto.request.BurnSettingDTO;
 import com.cebon.jiwei.shengxunzhuji.model.dto.request.DownLoadVideoDTO;
+import com.cebon.jiwei.shengxunzhuji.model.dto.response.TaskCallBackDTO;
+import com.cebon.jiwei.shengxunzhuji.model.po.BurnFile;
 import com.cebon.jiwei.shengxunzhuji.model.po.BurnSetting;
+import com.cebon.jiwei.shengxunzhuji.model.po.BurnVideo;
 import com.cebon.jiwei.shengxunzhuji.service.IBurnFileService;
 import com.cebon.jiwei.shengxunzhuji.service.IBurnSettingService;
-import com.cebon.jiwei.shengxunzhuji.hkservice.IHkService;
-import com.sun.jna.NativeLong;
+import com.cebon.jiwei.shengxunzhuji.service.IBurnVideoService;
 import lombok.extern.slf4j.Slf4j;
 import net.lingala.zip4j.exception.ZipException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +20,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 /**
  * @author: bugProvider
@@ -31,9 +31,8 @@ import java.time.format.DateTimeFormatter;
 @RestController()
 @RequestMapping("/burn")
 public class BurnController {
-
     @Autowired
-    IHkService hkService;
+    private IBurnVideoService burnVideoService;
 
     @Autowired
     private IBurnSettingService burnSettingService;
@@ -49,33 +48,41 @@ public class BurnController {
      */
     @PostMapping("/setting")
     public BurnSetting burnTask(@Valid @RequestBody BurnSettingDTO burnSettingDTO) throws ZipException {
-        return burnSettingService.save(burnSettingDTO);
+        return burnSettingService.burnTask(burnSettingDTO);
     }
 
     /**
-     * 下载文件
+     * 下载文件到刻录文件夹下
      *
-     * @param burnSettingDTO 刻录任务参数
+     * @param burnFileDTO 刻录任务参数
      * @return DB刻录任务
      */
     @PostMapping("/file")
-    public void burnFile(@Valid @RequestBody BurnFileDTO burnFileDTO)  {
-        burnFileService.burnFile(burnFileDTO);
+    public BurnFile burnFile(@Valid @RequestBody BurnFileDTO burnFileDTO) {
+        return burnFileService.burnFile(burnFileDTO);
     }
 
     /**
-     * 审讯一体机视频下载
+     * 下载审讯一体机视频到刻录文件夹下
      *
      * @param downLoadVideoDTO
-     * @return 登录号，如果登录号小于0，则登录失败
+     * @return 下载视频任务
      */
     @PostMapping("/download")
-    public NativeLong downLoadVideo(@Valid @RequestBody DownLoadVideoDTO downLoadVideoDTO) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        LocalDateTime sTime = LocalDateTime.parse(downLoadVideoDTO.getStartTime(), formatter).minusSeconds(2);
-        LocalDateTime eTime = LocalDateTime.parse(downLoadVideoDTO.getEndTime(), formatter).plusSeconds(2);
-        return hkService.downLoad(downLoadVideoDTO, sTime, eTime);
+    public BurnVideo downLoadVideo(@Valid @RequestBody DownLoadVideoDTO downLoadVideoDTO) {
+        return burnVideoService.burnVideo(downLoadVideoDTO);
     }
 
+
+    /**
+     * 任务回调测试接口
+     *
+     * @param taskCallBackDTO 刻录任务参数
+     */
+    @PostMapping(value = "/callBackTest")
+    public String callbackTest(@RequestBody TaskCallBackDTO taskCallBackDTO) {
+        log.info("接收到回调信息:{}", taskCallBackDTO);
+        return "ok";
+    }
 
 }

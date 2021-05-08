@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.cebon.jiwei.shengxunzhuji.mapper.BurnFileMapper">
+<mapper namespace="com.cebon.jiwei.shengxunzhuji.mapper.BurnVideoMapper">
 
-    <resultMap id="BaseResultMap" type="com.cebon.jiwei.shengxunzhuji.model.po.BurnFile">
+    <resultMap id="BaseResultMap" type="com.cebon.jiwei.shengxunzhuji.model.po.BurnVideo">
         <id column="id" property="id"/>
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
         <result column="burn_setting_id" property="burnSettingId"/>
-        <result column="file_url" property="fileUrl"/>
+        <result column="ip" property="ip"/>
+        <result column="user_name" property="userName"/>
+        <result column="password" property="password"/>
+        <result column="channelNo" property="channelNo"/>
+        <result column="start_time" property="startTime"/>
+        <result column="end_time" property="endTime"/>
         <result column="download_status" property="downloadStatus"/>
         <result column="download_error_info" property="downloadErrorInfo"/>
         <result column="call_back_status" property="callBackStatus"/>

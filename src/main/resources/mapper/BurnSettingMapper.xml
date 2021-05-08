@@ -3,7 +3,7 @@
 <mapper namespace="com.cebon.jiwei.shengxunzhuji.mapper.BurnSettingMapper">
 
     <resultMap id="BaseResultMap" type="com.cebon.jiwei.shengxunzhuji.model.po.BurnSetting">
-        <id column="mid" property="id"/>
+        <id column="id" property="id"/>
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
         <result column="task_num" property="taskNum"/>

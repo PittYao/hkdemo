@@ -12,6 +12,6 @@ import net.lingala.zip4j.exception.ZipException;
  */
 public interface IBurnSettingService extends IService<BurnSetting> {
 
-    BurnSetting save(BurnSettingDTO burnSettingDTO) throws ZipException;
+    BurnSetting burnTask(BurnSettingDTO burnSettingDTO) throws ZipException;
 
 }

@@ -3,6 +3,7 @@ POST http://localhost:8071/burn/download
 Content-Type: application/json
 
 {
+  "taskId": 1,
   "ip": "192.168.99.223",
   "userName": "admin",
   "password": "sjw@2021",
@@ -17,11 +18,11 @@ POST http://localhost:8071/burn/setting
 Content-Type: application/json
 
 {
-  "taskNum": 1,
+  "taskNum": 2,
   "encryptionType": 1,
   "password": "656",
   "odaSavePath": "E:\\fdfds\\dfdf",
-  "callBackUrl": "http://192"
+  "callBackUrl": "http://127.0.0.1:8071/burn/callBackTest"
 }
 
 ### 下载文件
@@ -30,8 +31,7 @@ POST http://localhost:8071/burn/file
 Content-Type: application/json
 
 {
-  "taskId": 1,
+  "taskId": 2,
   "fileUrl": "http://pics4.baidu.com/feed/03087bf40ad162d93da6bacbb86969ea8813cddf.jpeg?token=93a741e191c542ed5407f4afbc0fb724",
-  "callBackUrl": "656",
   "odaSavePath": "E:\\fdfds\\dfdf"
 }

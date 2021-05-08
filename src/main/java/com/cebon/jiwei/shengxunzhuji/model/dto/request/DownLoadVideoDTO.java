@@ -18,16 +18,18 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @Builder
 public class DownLoadVideoDTO {
+    @NotNull(message = "父任务id不能为空")
+    private Integer taskId;
     @NotBlank(message = "审讯机ip不能为空")
-    String ip;
+    private String ip;
     @NotBlank(message = "用户名不能为空")
-    String userName;
+    private String userName;
     @NotBlank(message = "密码不能为空")
-    String password;
+    private String password;
     @NotNull(message = "通道号不能为空")
-    Integer channelNo;
+    private Integer channelNo;
     @NotBlank(message = "视频开始时间不能为空")
-    String startTime;
+    private String startTime;
     @NotBlank(message = "视频结束时间不能为空")
-    String endTime;
+    private String endTime;
 }

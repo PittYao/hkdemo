@@ -14,7 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 import net.lingala.zip4j.exception.ZipException;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -32,12 +31,8 @@ public class BurnSettingServiceImpl extends ServiceImpl<BurnSettingMapper, BurnS
     @Autowired
     private DownloadConfig downloadConfig;
 
-    @Value("${download.tempPath}")
-    private String downloadTempPath;
-
-
     @Override
-    public BurnSetting save(BurnSettingDTO burnSettingDTO) throws ZipException {
+    public BurnSetting burnTask(BurnSettingDTO burnSettingDTO) throws ZipException {
         Integer encryptionType = burnSettingDTO.getEncryptionType();
         String password = burnSettingDTO.getPassword();
         String odaSavePath = burnSettingDTO.getOdaSavePath();

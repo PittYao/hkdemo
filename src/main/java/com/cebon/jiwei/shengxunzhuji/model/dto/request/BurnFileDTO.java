@@ -22,8 +22,4 @@ public class BurnFileDTO {
     private Integer taskId;
     @NotBlank(message = "文件地址不能为空")
     private String fileUrl;
-    @NotBlank(message = "回调不能为空")
-    private String callBackUrl;
-    @NotBlank(message = "刻录文件存放路径不能为空")
-    private String odaSavePath;
 }

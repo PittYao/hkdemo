@@ -50,9 +50,8 @@ logging:
     # 日志文件夹名称
     name: logs
 
+
 # ------------- 配置 下载设置 ---------- #
 download:
-  # 临时下载文件路径
-  tempPath: "E:\\downTemp"
   # vlc播放器的路径
   vlcPath: "lib\\vlc"

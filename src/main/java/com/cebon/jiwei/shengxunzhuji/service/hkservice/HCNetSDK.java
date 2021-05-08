@@ -13,7 +13,7 @@
  * @author Xubinfeng
  */
 
-package com.cebon.jiwei.shengxunzhuji.hkservice;
+package com.cebon.jiwei.shengxunzhuji.service.hkservice;
 
 import com.sun.jna.*;
 import com.sun.jna.examples.win32.GDI32.RECT;

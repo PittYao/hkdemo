@@ -11,5 +11,5 @@ import com.cebon.jiwei.shengxunzhuji.model.po.BurnFile;
  */
 public interface IBurnFileService extends IService<BurnFile> {
 
-    void burnFile(BurnFileDTO burnFileDTO) ;
+    BurnFile burnFile(BurnFileDTO burnFileDTO) ;
 }

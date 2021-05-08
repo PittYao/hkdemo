@@ -13,7 +13,5 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "download")
 public class DownloadConfig {
-    private String tempPath;
     private String vlcPath;
-
 }

@@ -45,10 +45,10 @@ Top of Stack: (sp=0x0000000000a7c748)
 0x0000000000a7c808:   0000000000a7c808 000000001dccd86a
 0x0000000000a7c818:   0000000000a7c890 000000001dccf798
 0x0000000000a7c828:   0000000000000000 000000001dccdd28
-0x0000000000a7c838:   0000000000a7c7f0 0000000000a7c880 
+0x0000000000a7c838:   0000000000a7c7f0 0000000000a7c880
 
 Instructions: (pc=0x00000001800023d0)
-0x00000001800023b0:   
+0x00000001800023b0:
 [error occurred during error reporting (printing registers, top of stack, instructions near pc), id 0xc0000005]
 
 Register to memory mapping:
@@ -60,7 +60,7 @@ RDX=0x0000000000a7c800 is pointing into the stack for thread: 0x000000001cdc5000
 RSP=0x0000000000a7c748 is pointing into the stack for thread: 0x000000001cdc5000
 RBP=0x0000000000a7c7d0 is pointing into the stack for thread: 0x000000001cdc5000
 RSI=0x00000000d9cdf5c0 is an oop
-java.lang.reflect.Method 
+java.lang.reflect.Method
  - klass: 'java/lang/reflect/Method'
 RDI=0x0000000000000010 is an unknown value
 R8 =0x0000000000000001 is an unknown value
@@ -84,7 +84,7 @@ j  com.sun.jna.Function.invoke([Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/O
 j  com.sun.jna.Function.invoke(Ljava/lang/Class;[Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/Object;+194
 j  com.sun.jna.Library$Handler.invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+344
 j  com.sun.proxy.$Proxy82.NET_DVR_Init()Z+9
-j  com.cebon.jiwei.shengxunzhuji.hkservice.HikServiceImpl.initSDK()V+32
+j  com.cebon.jiwei.shengxunzhuji.service.hkservice.HikServiceImpl.initSDK()V+32
 v  ~StubRoutines::call_stub
 J 1910  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (0 bytes) @ 0x0000000002f22dff [0x0000000002f22d80+0x7f]
 J 1909 C1 sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (104 bytes) @ 0x0000000002f23594 [0x0000000002f231e0+0x3b4]
@@ -361,9 +361,9 @@ Dynamic libraries:
 0x00007ff9e1ae0000 - 0x00007ff9e1e17000 	C:\WINDOWS\System32\combase.dll
 0x00007ff9dfe10000 - 0x00007ff9dfe91000 	C:\WINDOWS\System32\bcryptPrimitives.dll
 0x00007ff9e1580000 - 0x00007ff9e15ae000 	C:\WINDOWS\System32\IMM32.DLL
-0x00007ff9b5300000 - 0x00007ff9b532b000 	C:\Èí¼þ\macType\MacType64.dll
-0x00007ff9b5330000 - 0x00007ff9b537f000 	C:\Èí¼þ\macType\Easyhk64.dll
-0x00007ff9b5200000 - 0x00007ff9b52fe000 	C:\Èí¼þ\macType\MacType64.Core.dll
+0x00007ff9b5300000 - 0x00007ff9b532b000 	C:\ï¿½ï¿½ï¿½\macType\MacType64.dll
+0x00007ff9b5330000 - 0x00007ff9b537f000 	C:\ï¿½ï¿½ï¿½\macType\Easyhk64.dll
+0x00007ff9b5200000 - 0x00007ff9b52fe000 	C:\ï¿½ï¿½ï¿½\macType\MacType64.Core.dll
 0x00007ff9dc330000 - 0x00007ff9dc8f0000 	C:\WINDOWS\SYSTEM32\d2d1.dll
 0x00007ff9bd930000 - 0x00007ff9bdc2e000 	C:\WINDOWS\SYSTEM32\dwrite.dll
 0x0000000055ba0000 - 0x0000000055c72000 	E:\SDK\Java\JDK\jre\bin\msvcr100.dll
@@ -412,14 +412,14 @@ Dynamic libraries:
 0x00007ff9b7eb0000 - 0x00007ff9b7ebe000 	C:\WINDOWS\System32\winrnr.dll
 0x00007ff9dbed0000 - 0x00007ff9dbeec000 	C:\WINDOWS\system32\NLAapi.dll
 0x00007ff9b5ae0000 - 0x00007ff9b5af5000 	C:\WINDOWS\system32\wshbth.dll
-0x00007ff991b40000 - 0x00007ff991c86000 	E:\IdeaWorkSpace\Ê¢°î\Ê¡¼ÍÎ¯\shengxunzhuji\src\main\resources\lib\hik\HCNetSDK.DLL
-0x000000001e080000 - 0x000000001e6d9000 	E:\IdeaWorkSpace\Ê¢°î\Ê¡¼ÍÎ¯\shengxunzhuji\src\main\resources\lib\hik\HCCore.dll
+0x00007ff991b40000 - 0x00007ff991c86000 	E:\IdeaWorkSpace\Ê¢ï¿½ï¿½\Ê¡ï¿½ï¿½Î¯\shengxunzhuji\src\main\resources\lib\hik\HCNetSDK.DLL
+0x000000001e080000 - 0x000000001e6d9000 	E:\IdeaWorkSpace\Ê¢ï¿½ï¿½\Ê¡ï¿½ï¿½Î¯\shengxunzhuji\src\main\resources\lib\hik\HCCore.dll
 0x00007ff9d47a0000 - 0x00007ff9d4994000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
 
 VM Arguments:
-jvm_args: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:64223,suspend=y,server=n -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -javaagent:C:\Users\fanya\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\203.6682.168\plugins\java\lib\rt\debugger-agent.jar -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dfile.encoding=UTF-8 
+jvm_args: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:64223,suspend=y,server=n -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -javaagent:C:\Users\fanya\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\203.6682.168\plugins\java\lib\rt\debugger-agent.jar -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dfile.encoding=UTF-8
 java_command: com.cebon.jiwei.shengxunzhuji.ShengxunzhujiApplication
-java_class_path (initial): E:\SDK\Java\JDK\jre\lib\charsets.jar;E:\SDK\Java\JDK\jre\lib\deploy.jar;E:\SDK\Java\JDK\jre\lib\ext\access-bridge-64.jar;E:\SDK\Java\JDK\jre\lib\ext\cldrdata.jar;E:\SDK\Java\JDK\jre\lib\ext\dnsns.jar;E:\SDK\Java\JDK\jre\lib\ext\jaccess.jar;E:\SDK\Java\JDK\jre\lib\ext\jfxrt.jar;E:\SDK\Java\JDK\jre\lib\ext\localedata.jar;E:\SDK\Java\JDK\jre\lib\ext\nashorn.jar;E:\SDK\Java\JDK\jre\lib\ext\sunec.jar;E:\SDK\Java\JDK\jre\lib\ext\sunjce_provider.jar;E:\SDK\Java\JDK\jre\lib\ext\sunmscapi.jar;E:\SDK\Java\JDK\jre\lib\ext\sunpkcs11.jar;E:\SDK\Java\JDK\jre\lib\ext\zipfs.jar;E:\SDK\Java\JDK\jre\lib\javaws.jar;E:\SDK\Java\JDK\jre\lib\jce.jar;E:\SDK\Java\JDK\jre\lib\jfr.jar;E:\SDK\Java\JDK\jre\lib\jfxswt.jar;E:\SDK\Java\JDK\jre\lib\jsse.jar;E:\SDK\Java\JDK\jre\lib\management-agent.jar;E:\SDK\Java\JDK\jre\lib\plugin.jar;E:\SDK\Java\JDK\jre\lib\resources.jar;E:\SDK\Java\JDK\jre\lib\rt.jar;E:\IdeaWorkSpace\Ê¢°î\Ê¡¼ÍÎ¯\shengxunzhuji\target\classes;E:\1.Maven\Repository\org\springframework\boot\spring-boot-starter-validation\2.4.5\spring-boot-starter-validation-2.4.5.jar;E:\1.Maven\Repository\org\springframework\boot\spring-boot-starter\2.4.5\spring-boot-starter-2.4.5.jar;E:\1.Maven\Repository\org\springframework\boot\spring-boot-starter-logging\2.4.5\spring-boot-starter-logging-2.4.5.jar;E:\1.Maven\Repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;E:\1.Maven\Repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;E:\1.Maven\Repository\org\apache\logging\log4j\log4j-to-slf4j\2.13.3\log4j-to-slf4j-2.13.3.jar;E:\1.Maven\Repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;E:\1.Maven\Repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;E:\1.Maven\Repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;E:\1.Maven\Repository\org\yaml\snakeyaml\1.27\snakeyaml-1.27.jar;E:\1.Maven\Repository\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar;E:\1.Maven\Reposito
+java_class_path (initial): E:\SDK\Java\JDK\jre\lib\charsets.jar;E:\SDK\Java\JDK\jre\lib\deploy.jar;E:\SDK\Java\JDK\jre\lib\ext\access-bridge-64.jar;E:\SDK\Java\JDK\jre\lib\ext\cldrdata.jar;E:\SDK\Java\JDK\jre\lib\ext\dnsns.jar;E:\SDK\Java\JDK\jre\lib\ext\jaccess.jar;E:\SDK\Java\JDK\jre\lib\ext\jfxrt.jar;E:\SDK\Java\JDK\jre\lib\ext\localedata.jar;E:\SDK\Java\JDK\jre\lib\ext\nashorn.jar;E:\SDK\Java\JDK\jre\lib\ext\sunec.jar;E:\SDK\Java\JDK\jre\lib\ext\sunjce_provider.jar;E:\SDK\Java\JDK\jre\lib\ext\sunmscapi.jar;E:\SDK\Java\JDK\jre\lib\ext\sunpkcs11.jar;E:\SDK\Java\JDK\jre\lib\ext\zipfs.jar;E:\SDK\Java\JDK\jre\lib\javaws.jar;E:\SDK\Java\JDK\jre\lib\jce.jar;E:\SDK\Java\JDK\jre\lib\jfr.jar;E:\SDK\Java\JDK\jre\lib\jfxswt.jar;E:\SDK\Java\JDK\jre\lib\jsse.jar;E:\SDK\Java\JDK\jre\lib\management-agent.jar;E:\SDK\Java\JDK\jre\lib\plugin.jar;E:\SDK\Java\JDK\jre\lib\resources.jar;E:\SDK\Java\JDK\jre\lib\rt.jar;E:\IdeaWorkSpace\Ê¢ï¿½ï¿½\Ê¡ï¿½ï¿½Î¯\shengxunzhuji\target\classes;E:\1.Maven\Repository\org\springframework\boot\spring-boot-starter-validation\2.4.5\spring-boot-starter-validation-2.4.5.jar;E:\1.Maven\Repository\org\springframework\boot\spring-boot-starter\2.4.5\spring-boot-starter-2.4.5.jar;E:\1.Maven\Repository\org\springframework\boot\spring-boot-starter-logging\2.4.5\spring-boot-starter-logging-2.4.5.jar;E:\1.Maven\Repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;E:\1.Maven\Repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;E:\1.Maven\Repository\org\apache\logging\log4j\log4j-to-slf4j\2.13.3\log4j-to-slf4j-2.13.3.jar;E:\1.Maven\Repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;E:\1.Maven\Repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;E:\1.Maven\Repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;E:\1.Maven\Repository\org\yaml\snakeyaml\1.27\snakeyaml-1.27.jar;E:\1.Maven\Repository\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar;E:\1.Maven\Reposito
 Launcher Type: SUN_STANDARD
 
 Environment Variables:

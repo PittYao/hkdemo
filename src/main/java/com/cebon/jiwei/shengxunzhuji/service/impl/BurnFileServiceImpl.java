@@ -33,7 +33,7 @@ public class BurnFileServiceImpl extends ServiceImpl<BurnFileMapper, BurnFile> i
     private IBurnSettingService burnSettingService;
 
     @Override
-    public void burnFile(BurnFileDTO burnFileDTO) {
+    public BurnFile burnFile(BurnFileDTO burnFileDTO) {
         // 1.查询父任务是否存在
         Integer taskId = burnFileDTO.getTaskId();
         BurnSetting burnSetting = burnSettingService.getById(taskId);
@@ -61,6 +61,9 @@ public class BurnFileServiceImpl extends ServiceImpl<BurnFileMapper, BurnFile> i
         try {
             size = HttpUtil.downloadFile(fileUrl, FileUtil.file(odaSavePath));
             log.info("下载文件完成,文件大小:{} ", size);
+
+            // 4.1.0 查询最新的刻录父任务
+            burnSetting = burnSettingService.getById(burnSetting.getId());
             // 4.1.1添加刻录文件入库,任务完成状态
             burnFile.setDownloadStatus(TaskType.SUCCESS.getType());
             // 4.1.2修改父级刻录任务的子任务完成数量+1
@@ -69,6 +72,9 @@ public class BurnFileServiceImpl extends ServiceImpl<BurnFileMapper, BurnFile> i
 
         } catch (Exception e) {
             log.error("下载远程文件异常:", e);
+
+            // 4.2.0 查询最新的刻录父任务
+            burnSetting = burnSettingService.getById(burnSetting.getId());
             // 4.2.1添加刻录文件入库,任务异常状态,记录失败原因
             burnFile.setDownloadStatus(TaskType.ERROR.getType());
             burnFile.setDownloadErrorInfo(e.getMessage());
@@ -114,6 +120,6 @@ public class BurnFileServiceImpl extends ServiceImpl<BurnFileMapper, BurnFile> i
             this.updateById(burnFile);
         }
 
-
+        return burnFile;
     }
 }
