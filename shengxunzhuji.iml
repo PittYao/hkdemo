@@ -54,7 +54,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-web:5.3.6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.3.6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.3.6" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.3.6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.3.6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.3.6" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.springframework.boot:spring-boot-devtools:2.4.5" level="project" />
@@ -93,6 +92,9 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:5.3.6" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.7.0" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.75" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-aop:2.4.5" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.3.6" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.6" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: mysql:mysql-connector-java:8.0.23" level="project" />
     <orderEntry type="library" name="Maven: com.baomidou:mybatis-plus-boot-starter:3.4.2" level="project" />
     <orderEntry type="library" name="Maven: com.baomidou:mybatis-plus:3.4.2" level="project" />
