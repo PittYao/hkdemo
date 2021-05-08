@@ -29,8 +29,7 @@ Content-Type: application/json
 
 {
   "taskId": 2,
-  "fileUrl": "http://pics4.baidu.com/feed/03087bf40ad162d93da6bacbb86969ea8813cddf.jpeg?token=93a741e191c542ed5407f4afbc0fb724",
-  "odaSavePath": "E:\\fdfds\\dfdf"
+  "fileUrl": "http://pics4.baidu.com/feed/03087bf40ad162d93da6bacbb86969ea8813cddf.jpeg?token=93a741e191c542ed5407f4afbc0fb724"
 }
 
 ### 查询刻录父任务信息
