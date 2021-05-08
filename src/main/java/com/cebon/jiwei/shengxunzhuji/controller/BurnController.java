@@ -14,17 +14,16 @@ import lombok.extern.slf4j.Slf4j;
 import net.lingala.zip4j.exception.ZipException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
 /**
+ * 刻录接口
  * @author: bugProvider
  * @date: 2021/5/6 11:33
  * @description: 海康审讯机
+ *
  */
 @Slf4j
 @Validated
@@ -83,6 +82,31 @@ public class BurnController {
     public String callbackTest(@RequestBody TaskCallBackDTO taskCallBackDTO) {
         log.info("接收到回调信息:{}", taskCallBackDTO);
         return "ok";
+    }
+
+
+    /**
+     * 查询刻录父任务信息
+     */
+    @GetMapping("/burnSetting/{burnSettingId}")
+    public BurnSetting queryBurnSetting(@PathVariable Integer burnSettingId) {
+        return burnSettingService.getById(burnSettingId);
+    }
+
+    /**
+     * 查询下载文件任务信息
+     */
+    @GetMapping("/burnFile/{burnFileId}")
+    public BurnFile queryBurnFile(@PathVariable Integer burnFileId) {
+        return burnFileService.getById(burnFileId);
+    }
+
+    /**
+     * 查询下载视频任务信息
+     */
+    @GetMapping("/burnVideo/{burnVideoId}")
+    public BurnVideo queryBurnVideo(@PathVariable Integer burnVideoId) {
+        return burnVideoService.getById(burnVideoId);
     }
 
 }

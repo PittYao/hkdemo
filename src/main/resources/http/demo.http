@@ -1,5 +1,17 @@
+###申请刻录任务
+POST http://192.168.99.121:8071/burn/setting
+Content-Type: application/json
+
+{
+  "taskNum": 2,
+  "encryptionType": 1,
+  "password": "656",
+  "odaSavePath": "E:\\fdfds\\dfdf",
+  "callBackUrl": "http://127.0.0.1:8071/burn/callBackTest"
+}
+
 ### 下载审讯机视频
-POST http://localhost:8071/burn/download
+POST http://192.168.99.121:8071/burn/download
 Content-Type: application/json
 
 {
@@ -12,22 +24,8 @@ Content-Type: application/json
   "endTime": "2021-05-06 13:35:00"
 }
 
-###申请刻录任务
-
-POST http://localhost:8071/burn/setting
-Content-Type: application/json
-
-{
-  "taskNum": 2,
-  "encryptionType": 1,
-  "password": "656",
-  "odaSavePath": "E:\\fdfds\\dfdf",
-  "callBackUrl": "http://127.0.0.1:8071/burn/callBackTest"
-}
-
 ### 下载文件
-
-POST http://localhost:8071/burn/file
+POST http://192.168.99.121:8071/burn/file
 Content-Type: application/json
 
 {
@@ -35,3 +33,12 @@ Content-Type: application/json
   "fileUrl": "http://pics4.baidu.com/feed/03087bf40ad162d93da6bacbb86969ea8813cddf.jpeg?token=93a741e191c542ed5407f4afbc0fb724",
   "odaSavePath": "E:\\fdfds\\dfdf"
 }
+
+### 查询刻录父任务信息
+GET http://192.168.99.121:8071/burn/burnSetting/1
+
+### 查询下载文件任务信息
+GET http://192.168.99.121:8071/burn/burnFile/1
+
+### 查询下载视频任务信息
+GET http://192.168.99.121:8071/burn/burnVideo/1

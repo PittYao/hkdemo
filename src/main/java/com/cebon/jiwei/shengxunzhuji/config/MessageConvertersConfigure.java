@@ -6,10 +6,8 @@ import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,14 +37,10 @@ public class MessageConvertersConfigure implements WebMvcConfigurer {
         return fastJsonHttpMessageConverter;
     }
 
-    //保证FastJsonHttpMessageConverter在StringHttpMessageConverter前被调用
+    //只启用FastJsonHttpMessageConverter
     @Override
     public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
-        //converters.removeIf(t -> t instanceof MappingJackson2HttpMessageConverter);
         converters.clear();
         converters.add(fastJsonHttpMessageConverter());
-        StringHttpMessageConverter converter = new StringHttpMessageConverter(
-                StandardCharsets.UTF_8);
-        converters.add(converter);
     }
 }

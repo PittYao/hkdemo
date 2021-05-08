@@ -18,8 +18,10 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @Builder
 public class BurnFileDTO {
+    /** 刻录父任务id */
     @NotNull(message = "父任务id不能为空")
     private Integer taskId;
+    /** 文件地址 */
     @NotBlank(message = "文件地址不能为空")
     private String fileUrl;
 }
