@@ -2,6 +2,7 @@ package com.cebon.jiwei.shengxunzhuji.util;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.IdUtil;
+import com.cebon.jiwei.shengxunzhuji.exception.BusinessException;
 import net.lingala.zip4j.core.ZipFile;
 import net.lingala.zip4j.exception.ZipException;
 
@@ -64,6 +65,11 @@ public class CommonUtil {
     public static String copyFile(String srcPath, String distPath) {
         // 1.获取源文件的绝对路径
         srcPath = System.getProperty("user.dir") + "\\" + srcPath;
+        // 判断源文件是否存在
+        boolean exist = FileUtil.exist(srcPath);
+        if (!exist) {
+            throw new BusinessException(500, "拷贝vlc播放器不存在");
+        }
         // 2.拷贝文件到指定文件夹中
         File copyFile = FileUtil.copy(srcPath, distPath, Boolean.TRUE);
         // 3.返回拷贝后的文件的父级路径
