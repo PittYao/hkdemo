@@ -71,6 +71,19 @@
             <artifactId>p6spy</artifactId>
             <version>3.8.1</version>
         </dependency>
+        <!-- 数据库说明文档-->
+        <dependency>
+            <groupId>cn.smallbun.screw</groupId>
+            <artifactId>screw-core</artifactId>
+            <version>1.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.30</version>
+        </dependency>
+
+        <!-- jna       -->
         <dependency>
             <groupId>com.sun.jna</groupId>
             <artifactId>jna</artifactId>
