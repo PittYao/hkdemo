@@ -4,8 +4,7 @@ Content-Type: application/json
 
 {
   "taskNum": 2,
-  "encryptionType": 1,
-  "password": "656",
+  "encryptionType": 0,
   "odaSavePath": "E:\\fdfds\\dfdf",
   "callBackUrl": "http://127.0.0.1:8071/burn/callBackTest"
 }
