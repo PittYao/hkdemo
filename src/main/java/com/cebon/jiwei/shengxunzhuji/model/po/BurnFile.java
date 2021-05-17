@@ -22,8 +22,8 @@ import java.time.LocalDateTime;
 @Builder
 @TableName("burn_file")
 public class BurnFile {
-    @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    @TableId(value = "id", type = IdType.ASSIGN_ID)
+    private String id;
 
     @TableField(value = "create_time")
     private LocalDateTime createTime;

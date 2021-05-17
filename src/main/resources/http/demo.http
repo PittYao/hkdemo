@@ -1,5 +1,5 @@
 ###申请刻录任务
-POST http://192.168.99.121:8071/burn/setting
+POST http://192.168.99.177:8071/burn/setting
 Content-Type: application/json
 
 {
@@ -10,7 +10,7 @@ Content-Type: application/json
 }
 
 ### 下载审讯机视频
-POST http://192.168.99.121:8071/burn/download
+POST http://192.168.99.177:8071/burn/download
 Content-Type: application/json
 
 {
@@ -24,11 +24,11 @@ Content-Type: application/json
 }
 
 ### 下载文件
-POST http://192.168.99.121:8071/burn/file
+POST http://192.168.99.177:8071/burn/file
 Content-Type: application/json
 
 {
-  "taskId": 2,
+  "taskId": 1,
   "fileUrl": "http://pics4.baidu.com/feed/03087bf40ad162d93da6bacbb86969ea8813cddf.jpeg?token=93a741e191c542ed5407f4afbc0fb724"
 }
 

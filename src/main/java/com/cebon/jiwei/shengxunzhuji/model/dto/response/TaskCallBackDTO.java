@@ -18,7 +18,7 @@ public class TaskCallBackDTO {
     /** 父任务id */
     private Integer taskId;
     /** 子任务id */
-    private Integer subTaskId;
+    private String subTaskId;
     /** 任务完成状态  -1=任务异常 0=任务开始 1=任务完成 */
     private Integer status;
 }
